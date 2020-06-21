@@ -7,7 +7,7 @@ const app = express()
 const publicdir = path.join(__dirname,'../public')
 const viewpath = path.join(__dirname,'../templates/views')
 const partialpath = path.join(__dirname,'../templates/partials')
-
+const port = process.env.PORT || 3000
 app.set('view engine','hbs')
 app.set('views',viewpath)
 hbs.registerPartials(partialpath)
@@ -61,7 +61,7 @@ app.get('*',(req,res ) =>{
     res.send("Error page")
     
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
     console.log("Server is running")
 })

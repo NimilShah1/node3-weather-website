@@ -5,7 +5,7 @@ console.log("Client side")
 
 
 
-fetch('http://localhost:3000/weather?address=boston').then((response)=>{
+fetch('/weather?address=boston').then((response)=>{
     response.json().then((data) =>{
         console.log(data.location)
     })
